@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in JavaScript</title>
+</head>
+<body>
+    <!-- Array -->
+    <!-- Array is an object. In addition, array is a collection of variables -->
+
+    <!-- Library Functions for Array
+        Push: used to insert any value in an array.
+
+        Pop: used to remove the last index.
+        
+        concat: used to concat arrays.
+    -->
+    <script>
+        
+        // array declaration - 1st way
+        var names = new Array(5);
+        names[0] = "Jarif";
+        names[1] = "Arham";
+        names[2] = "Zarin";
+        names[3] = "Pew";
+        names[4] = "Riza";
+        console.log(names);
+        // console.log(names[2]);
+
+        //array declaration -2nd way
+        var subjects = ["Bangla", "English", "Math", "Physics", "Chemistry"];
+        console.log(subjects);
+        // console.log(subject[2]);
+        console.log(subjects.length); // length function use to check the length of an array
+
+        //library functions for array
+        
+        //push() function
+        console.log(subjects.push("ICT")); // ICT will be added in the last
+        console.log(subjects.push("Biology"));
+        
+        //pop() function
+        console.log(subjects.pop()); // "Biology" will be removed
+        console.log(subjects); 
+
+        //concat() function
+        var country1 = ["Bangladesh", "India", "Pakistan"];
+        var country2 = ["England", "New Zeadland", "Australia"];
+        var country = country1.concat(country2); // country1 + country2
+        console.log(country);
+
+    </script>
+</body>
+</html>

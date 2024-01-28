@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Array in Javascipt</title>
+</head>
+<body>
+    <!-- 2D Array
+        A two dimentional array is an array that has two element for each index
+    -->
+
+    <script>
+
+        function highestRunScorer(playersInfo){
+            var highestScorer = playersInfo[0][0];
+            var highestScore = playersInfo[0][1];
+
+            for (var i = 0; i < playersInfo.length; i ++){
+                if (highestScore < playersInfo[i][1]){
+                    highestScore = playersInfo[i][1];
+                    highestScorer = playersInfo[i][0];
+                }
+            }
+            return highestScorer
+        }
+        var playersInfo = [
+            ["Jarif", 80], 
+            ["Arham", 70], 
+            ["Zarin", 100], 
+            ["Pew", 2]
+        ];
+        var player_name = highestRunScorer(playersInfo);
+        console.log(player_name);
+
+    </script>
+</body>
+</html>

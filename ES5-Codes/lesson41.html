@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Event in Javascipt</title>
+</head>
+<body>
+
+    <button class="save-btn">Save </button>
+    <p class="message"></p>
+
+    <button class="time-btn">Count</button>
+    <p class="time"></p>
+    <script>
+
+        //settimeout()
+
+            var saveBtn = document.querySelector(".save-btn");
+            var message = document.querySelector(".message");
+        var timeBtn = document.querySelector(".time-btn");
+        var time = document.querySelector(".time");
+
+        saveBtn.addEventListener("click", saveUser);
+
+        function saveUser(){
+
+            message.textContent = "User registration successfull";
+
+        };
+
+        setTimeout(() =>{
+
+            message.textContent = "";
+
+        }, 2000);
+
+        timeBtn.addEventListener("click", function (){
+
+            let count = 0;
+            time.textContent = count;
+
+            setInterval(()=>{
+                count ++;
+                time.textContent = count;
+            }, 1000);
+
+        });
+
+
+
+    </script>
+</body>
+</html>

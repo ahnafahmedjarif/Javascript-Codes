@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number Method in Javascript</title>
+</head>
+<body>
+
+    <!-- toFixed() -->
+    <!-- It can be used to format a number with a specific number of digits to the right of the decimal.  -->
+
+    <!-- toPrecision() -->
+    <!-- The toPrecision() method formats a number to a specified length. -->
+
+    <!-- Number method -->
+    <!-- The Number() method converts a value to a number. -->
+
+    <script>
+
+        var num1 = 20;
+        num1 = toString(num1); // converting number data type to string 
+        console.log(typeof(num1));
+
+        var num2 = "20";
+        num2 = parseInt(num2); // connveting string to number data type
+        console.log(typeof(num2));
+
+        var num3 = 20.5;
+        num3 = parseFloat(num3);
+        console.log(typeof(num3)); //converting float to number datatype
+
+        var number1 = 2.567;
+        console.log(number1.toFixed(2));
+
+        var number2 = 5.3859;
+        console.log(number2.toPrecision(4));
+
+        console.log(Number("50.2")); // converting to number
+        console.log(typeof(Number("20.3456"))); // check the datatype
+        
+    </script>
+</body>
+</html>

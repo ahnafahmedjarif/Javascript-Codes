@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider with Javascipt</title>
+
+</head>
+<body>
+
+        <button onclick="prev()">Previous</button>
+        <img src="Image/html.png" alt="" height="300px" width="300px">
+        <button onclick="next()">Next</button>
+    
+    <script>    
+
+        var photos = ["Image/html.png", "Image/js.png", "Image/python.png"];
+        var image = document.querySelector("img");
+        var count = 0;
+        
+        function next() {
+            count ++;
+            if (count >= photos.length) {
+                count = 0;
+                image.src = photos[count];
+            }
+            else{
+                image.src = photos[count];
+            }
+        }
+
+        function prev() {
+            count --;
+            if (count < 0) {
+                count = photos.length - 1;
+                image.src = photos[count];
+            }
+            else{
+                image.src = photos[count];
+            }
+        }
+    </script>
+</body>
+</html>

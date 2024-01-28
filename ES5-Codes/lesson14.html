@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFEs and Function Expression in Javascript</title>
+</head>
+<body>
+    <!-- IIFEs (Immediately Invokeable Function Expressions)
+    An immediately invoked function expression, or IIFE (pronounced iffy), is a function that is called immediately after it is defined. While it may seem peculiar, creating functions that behave in such a way can actually benefit the code that we write. -->
+    
+    <!-- Function Expression -->
+    <!-- The Javascript Function Expression is used to define a function inside any expression.  -->
+
+    <script>
+        
+        // Immediately Invokeable Function
+        (function sum(n1, n2){
+            console.log(n1 + n2);
+        })(3, 4);
+
+        (function message(message){
+            console.log(message);
+        })("Hello World");
+
+        // Function Expressions
+        const display = function displayMsg(){
+            console.log("Hi I am a message");
+        };
+        display();
+
+    </script>
+</body>
+</html>

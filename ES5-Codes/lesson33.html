@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Event in Javascipt</title>
+    <style>
+        div{
+            margin-bottom: 2rem;
+        }
+        .btn{
+            padding: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action ="">
+
+        <div>
+            <label for="name">Name: 
+                <input type="text" name="name" id="name" required autofocus>
+            </label> 
+        </div>
+
+        <br>
+
+        <div>
+            <label for="email">Email: 
+                <input type="email" name="email" id="email" required>
+            </label>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="password">Password: 
+                <input type="password" name="password" id="password" required minlength="4" maxlength="8">
+            </label>        
+        </div>
+
+        <div>
+            <input type="submit" value="Sign Up" class="btn">
+        </div>
+
+    </form>
+
+    <script>
+
+        //finding the elements
+        const form = document.querySelector("form");
+        const name = form.querySelector("div #name");
+        const email = form.querySelector("div #email");
+        const password = form.querySelector("div #password");
+
+        // console.log(name);
+
+        form.addEventListener("submit", formHandler);
+
+        function formHandler(event) {
+
+            // event.preventDefault();
+            console.log("submit");
+            // console.log(name.value);
+            // console.log(email.value);
+            // console.log(password.value);
+
+            const userInfo = {
+                name : name.value,
+                email : email.value,
+                password : password.value
+            }
+            console.log(userInfo);
+            
+            name.value = "";
+            email.value = "";
+            password.value = "";
+        }
+
+    </script>
+</body>
+</html>

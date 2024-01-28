@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick event in JavaScript</title>
+</head>
+<body>
+    <button  onclick="myPicture1()"> JS</button>
+    <button  onclick="myPicture2()"> Python</button>
+    <p id="paragraph"></p>
+    <img src="#" alt="" height="300px" width="300px" id="image-id">
+    
+
+    <script>
+
+        function myPicture1(){
+
+            var picture_variable = document.querySelector("#image-id"); //select the image tag
+            var para_variable = document.querySelector("#paragraph"); //select the p tag
+            para_variable.innerHTML = "You have clicked JS."
+            picture_variable.src = "Image/js.png";
+
+        }
+
+        function myPicture2(){
+
+            var picture_variable = document.querySelector("#image-id"); //select the image tag
+            var para_variable = document.querySelector("#paragraph"); //select the p tag
+            para_variable.innerHTML = "You have clicked Python."
+            picture_variable.src = "Image/python.png";
+
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop an Array in Javascipt</title>
+</head>
+<body>
+
+    <script>
+
+        var num = [10, 20, 50, 60, 7];
+        var sum = 0;
+        for (var i = 0; i < 5; i++){
+            sum += num[i];
+            console.log(i); // print the numbers of num
+        }
+        console.log("Sum = " + sum); // print the sum of the numbers
+
+        // By getting input from user
+        var number = new Array();
+        var addition = 0;
+        for (var j = 0; j < 5; j ++){
+            number[i] = parseInt(prompt("Enter a number: "));
+            addition += number[i];
+            console.log(number[i]);
+        }
+        console.log("Sum: "+ addition);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Size and Toggle Event in Javascript</title>
+</head>
+<body style="height: 150vh;">
+
+    <details>
+
+        <summary>Jarif</summary>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio officia nostrum aperiam molestias suscipit doloremque inventore reprehenderit doloribus voluptatum. Omnis?</p>
+
+    </details>
+
+    <script>
+
+        window.addEventListener("load", function (){
+            console.log("load");
+        });
+
+        window.addEventListener("unload", function (){
+            console.log("unload");
+        });
+
+        window.addEventListener("scroll", function (){
+            console.log("scroll");
+        });
+
+        window.addEventListener("resize", function (){
+            // console.log("Resize");
+            const width =  window.outerWidth;
+            const height =  window.outerHeight;
+            console.log(`height ${height}, width ${width}`);
+        });
+
+        const details = document.querySelector("details");
+        details.addEventListener("toggle", function (event){
+            // console.log("Toggle");
+            console.log(event.target.open);
+        });
+
+    </script>   
+</body>
+</html>

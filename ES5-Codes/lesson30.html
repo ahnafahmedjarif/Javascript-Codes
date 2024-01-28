@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing audio in Javascipt</title>
+    <style>
+        .myButton{
+            background-color: green;
+            padding: 30px;
+            margin: 30px;
+            font-family: sans-serif;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="myButton">Audio 1</button>
+    <button class="myButton">Audio 2</button>
+    <button class="myButton">Audio 3</button>
+
+    <script>
+
+        for (var i = 0; i < 3; i ++){
+
+            document.querySelectorAll(".myButton")[i].addEventListener("click", function(){
+                var text = this.innerHTML;
+                console.log(text);
+                audioPlay(text);
+
+            })
+        }
+
+        function audioPlay(text){
+
+            switch (text){
+                case "Audio 1":
+                    var audio = new Audio("Audio/a.mp3");
+                    audio.play();
+                    break;
+                case "Audio 2":
+                    var audio = new Audio("Audio/b.mp3");
+                    audio.play();
+                    break;
+                case "Audio 3":
+                    var audio = new Audio("Audio/c.mp3");
+                    audio.play();
+                    break;
+                }
+                
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Library Methods in Javascipt</title>
+</head>
+<body>
+    <!-- Array Library Methods
+        we have already learned about pop(), push(), concat()
+
+        shift: shift is opposite of pop. Shift is used to remove element from begining.
+
+        unshift: unshift is opposite of push. Unshift is used to insert element from begining.
+
+        splice: The splice() method of Array instances changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+        slice: The slice() method selects from a given start, up to a (not inclusive) given end.
+
+        sort: The sort() method returns a reference to the original array, so mutating the returned array will mutate the original array as well.
+        
+        reverse: The reverse() method reverses the order of the elements in an array.
+    -->
+
+    <script>
+        
+        var names = ["Jarif", "Arham", "Zarin"];
+
+        console.log(names.shift()); // "Jarif" will be removed
+        names.unshift("Pew") // "Pew" will be added in the begining.
+        console.log(names);
+
+        // adding element with splice
+        names.splice(1, 0, "Onti", "Sajib") // "onti" and "saijb" will be added in the 1st index. 
+        console.log(names);
+
+        //removing element with splice
+        names.splice(1, 2);
+        console.log(names);
+
+        var newArray = names.slice(1, 2);
+        // console.log(newArray);
+        // console.log(names);
+
+        var sortedArray = names.sort(); // the array has become sorted bt alphabet
+        console.log(names.reverse()); // the array has reversed
+        console.log(sortedArray);
+
+        var numbers = [5, 20, 4, 2, 80];
+        numbers.sort(function(a, b){
+            return a-b;
+        });
+        console.log(numbers); //sorting number
+
+    </script>
+</body>
+</html>

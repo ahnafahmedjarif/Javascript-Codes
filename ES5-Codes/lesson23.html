@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in Javascipt</title>
+</head>
+<body>
+    <!-- DOM
+        DOM = Document Object Model.
+        DOM is the data representation of the objects that comprise the structure and content of a document on the web.
+
+        getElementByID = to get element by its ID.
+
+        getElementByTagName = to get element by its tag name.
+
+        getElementByClassName = to get element by its class name.
+
+        querySelector = to get element with class, tag or Id.
+    -->
+
+    <h1 id="heading1">This is heading 1.</h1>
+    <h1 id="heading2">This is heading 2.</h1>
+    <p class="para1">This is a paragraph.</p>
+    <p class="para2">This is another paragraph.</p>
+
+    <script>
+
+        //getElementByID
+        var heading1 = document.getElementById("heading1");
+        heading1.innerHTML = "Hello";
+        // console.log(heading1);
+
+        //getElementByTagName
+        var heading2 = document.getElementsByTagName("h1")[0];
+        heading2.innerHTML = "Hi";
+
+        //getElementByClassName
+        var para1 = document.getElementsByClassName("para1")[0];
+        para1.innerHTML = "I am selected with class name";
+
+        var para2 = document.querySelector(".para2");
+        para2.innerHTML = "This is changed";
+    </script>
+</body>
+</html>

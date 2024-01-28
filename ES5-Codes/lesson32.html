@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object - onchange in Javascipt</title>
+</head>
+<body>
+
+    <label for="name">
+        Name: <input type="text" name="name" id="" class="name-input" id="name-input">
+    </label>
+
+    <h1>Programming Languge</h1>
+
+    <div>
+
+        <label for="c">
+            <input type="checkbox" name="program" id="" value="c">C
+        </label>
+
+        <label for="js">
+            <input type="checkbox" name="program" id="" value="Javascipt">Javascipt
+        </label>
+
+        <label for="py">
+            <input type="checkbox" name="program" id="" value="Python">Python
+        </label> 
+        <br>
+        <br>
+    </div>
+
+    <label for="department">
+        Department: <br>
+        <br>
+    <select name="department" id="department">
+        <option value="cse">CSE</option>
+        <option value="eee">EEE</option>
+        <option value="ece">ECE</option>
+    </select>  
+
+    </label>
+    <br>
+    <br>
+    <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+
+    <script>
+
+        console.clear();
+
+        const input = document.querySelector('input[name = name]');
+        input.addEventListener("change", function(event) {
+
+            // console.log(event);
+            console.log(event.target);
+            console.log(event.target.className);
+            // console.log(event.target.id);
+            console.log(event.target.value);
+
+        });
+
+        const programs = document.querySelectorAll('input[name=program]');
+        // console.log(programs);
+        Array.from(programs).map((programs) => {
+            programs.addEventListener("change", programHandler);
+        });
+
+        function programHandler(event){
+            // console.log("checked");
+            if ( event.target.checked ) {
+                console.log("checked");
+                console.log(event.target.value);
+            };
+        };
+
+        const department = document.querySelector("#department");
+        // console.log(department);
+
+        department.addEventListener("change", departmentHandler);
+
+        function departmentHandler(event) {
+
+                console.log("selected");
+                console.log(event.target.value);
+
+        };
+
+        const textarea = document.querySelector("textarea");
+        // console.log(textarea);
+
+        textarea.addEventListener("change", textareaHandler);
+
+        function textareaHandler(event) {
+
+            // console.log(event);
+            console.log("Text = " + event.target.value);
+            // console.log();
+        };
+
+    </script>
+</body>
+</html>

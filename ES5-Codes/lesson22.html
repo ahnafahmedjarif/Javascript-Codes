@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date object and date methods in Javascipt</title>
+</head>
+<body>
+    <!-- Date object and date methods
+
+        getFullYear() = to get only year.
+
+        getMonth() = to get only month. Month's output is based on index number.
+
+        getDate() = to get only date.
+
+        getDay() = to get only day.
+
+        getHours() = to get only hours.
+
+        getMinutes() = to get only minutes.
+
+        getSeconds() = to get only seconds.
+    --> 
+
+    <script>
+
+        var date = new Date();
+        console.log(date);
+
+        var year = date.getFullYear();
+        console.log(year);
+
+        var month = date.getMonth();
+        console.log(month); // month is based on index number 
+
+        var current_date = date.getDate();
+        console.log(current_date);  
+
+        var day = date.getDay();
+        console.log(day); // day is also based on index number
+
+        var hour = date.getHours();
+        console.log(hour);
+
+        var minute = date.getMinutes();
+        console.log(minute);
+
+        var second = date.getSeconds();
+        console.log(second);
+    </script>
+</body>
+</html>

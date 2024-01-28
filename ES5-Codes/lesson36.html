@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event in Javascipt</title>
+</head>
+<body>
+
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <script>
+
+        const textarea = document.querySelector("textarea");
+
+        textarea.addEventListener("keydown", function (event){
+
+            if (event.repeat){
+
+                console.log("Do not repeat");
+            }
+
+        });
+
+        textarea.addEventListener("keypress", function (event){
+
+        //     console.log("Keypress");
+        });
+
+        textarea.addEventListener("keyup", function (event){
+
+            // console.log("keyup");
+            console.log(event.key);
+            // console.log(event.keyCode);
+            // console.log(event.code);
+            if (event.shiftKey){
+                console.log("Shift+"+event.key);
+            }
+            
+        });
+    </script>
+</body>
+</html>

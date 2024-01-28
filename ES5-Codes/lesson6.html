@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Function for string</title>
+</head>
+<body>
+
+    <!-- Library Function -->
+    <!-- Library function means the functions which have already built , we just need to use them. -->
+
+    <!-- length -->
+    <!-- To check a string length -->
+
+    <!-- charAt() -->
+    <!-- The charAt() method returns the character at a specified index (position) in a string. -->
+
+    <!-- toUpperCase() -->
+    <!-- to convert into upper case -->
+
+    <!-- toLowerCase() -->
+    <!-- to convert into lower case -->
+
+    <!-- concat() -->
+    <!-- to concate string -->
+
+    <!-- slice -->
+    <!-- The slice() method returns selected elements in an array, as a new array.  -->
+
+    <script>
+        
+        //Length
+
+        var text = "Javascript";
+        var len = text.length;
+        console.log("Number of charecter: " + len);
+        
+        // with prompt() function
+        var input = prompt("Enter any string: ");
+        var len_input = input.length;
+        console.log("Number of charecter: " + len_input);
+
+        // charAt()
+        var text2 = "Javascript";
+        console.log(text2.charAt(3));
+        
+        // toUpperCase
+        var text3 = "Javascript";
+        console.log(text3.toUpperCase());
+
+        //toLowerCase
+        var text4 = "JAVASCRIPT";
+        console.log(text4.toLowerCase());
+
+        // concat
+        var text5 = "Javascript";
+        var text6 = " is a programming language.";
+        console.log(text5.concat(text6));
+
+        //slice
+        var text7 = "Javascript";
+        var text8 = text7.slice(2, 5);
+        console.log(text8);
+        
+    </script>
+</body>
+</html>

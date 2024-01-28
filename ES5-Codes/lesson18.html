@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1D Array in Javascipt</title>
+</head>
+<body>
+    <!-- 1D Array
+            A one-dimensional array is an array that has only one element for each index. -->
+
+    <script>
+
+        function highestScore(scores){
+            scores = new Array(5); // creating a new array
+            for (var i = 0; i < scores.length; i ++){
+                scores[i] = parseInt(prompt("Enter scores: "));
+                var max_score = scores[0];
+                if (scores[i] > max_score) {
+                    max_score = scores[i];
+                }
+                console.log(scores[i]);
+            }
+            console.log("Highest score: " + max_score);
+        }
+        highestScore();
+
+    </script>
+</body>
+</html>

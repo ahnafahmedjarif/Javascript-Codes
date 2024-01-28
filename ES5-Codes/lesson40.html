@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM in Javascipt</title>
+</head>
+<body>
+
+    <!-- BOM
+        BOM = Browser Object Model
+    -->
+    <h1>BOM</h1>
+    <div class="location-div">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
+    <button id="visit-button">Visit My Site</button>
+
+    <script>
+
+        console.clear();
+        console.log(window);
+        // console.log(window.location);
+
+        //href
+        console.log(location.href);
+
+        //protocol
+        console.log(location.protocol);
+
+        //hostname
+        console.log(location.hostname);
+
+        //port
+        console.log(location.port);
+
+        //pathname
+        console.log(location.pathname);
+
+        let location_div = document.querySelector(".location-div");
+        // console.log(location_div);
+
+        let p1 = location_div.children[0];
+        p1.textContent = location.href;        
+
+
+        let p2 = location_div.children[1];
+        p2.textContent = location.hostname;        
+
+
+        let p3 = location_div.children[2];
+        p3.textContent = location.protocol;        
+
+
+        let p4 = location_div.children[3];
+        p4.textContent = location.hostname;
+        
+        
+        let p5 = location_div.children[4];
+        p5.textContent = location.pathname;
+        
+        
+        let p6 = location_div.children[5];
+        p6.textContent = location.port;        
+
+        let visitButton = document.getElementById("visit-button");
+        visitButton.addEventListener("click", function(){
+            location.assign("https://www.youtube.com");
+        });
+
+    </script>
+</body>
+</html>

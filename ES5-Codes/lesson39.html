@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag Event in Javascipt</title>
+    <style>
+
+        #div1{
+
+            height: 300px;
+            width: 300px;
+            background-color: orange;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="div1"></div>
+    <p id="drag1" draggable="true">This is a paragraph</p>
+
+    <script>
+        
+        const p = document.querySelector("#drag1");
+        const div = document.querySelector("#div1");
+
+        p.addEventListener("dragstart", function (event){
+
+            event.dataTransfer.setData("Text", event.target.id);
+
+        });
+
+        div.addEventListener("dragover", function (event){
+
+            event.preventDefault();
+
+        });
+
+        div.addEventListener("drop", function(event){
+
+            let id = event.dataTransfer.getData("Text");
+            div.appendChild(document.getElementById(id));
+            // console.log(id);
+            event.preventDefault();
+        });
+
+
+    </script>
+</body>
+</html>

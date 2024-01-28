@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object and Constructor in Javascript</title>
+</head>
+<body>
+    <!-- Object
+        JavaScript objects are containers for named values called properties.
+
+        Constructor
+        The constructor method is a special method of a class for creating and initializing an object instance of that class.
+    -->
+
+    <script>
+
+        // create a object
+        var student_info = {
+            name: "Ahnaf Ahmed",
+            age : 15,
+            roll : 11,
+            language : ["Bangla", "Hindi", "Spanish", "English"]
+        }
+        // console.log(student_info.age);
+        // console.log(student1.name);
+
+        // create a constructor
+        function Student(name, age, roll, language){
+            this.name = name;
+            this.age = age;
+            this.roll = roll;
+            this.language = language;
+
+            // lets create a function inside the constructor to display the informations
+            this.display_info = function(){
+                console.log(this.name);
+                console.log(this.age);
+                console.log(this.roll);
+                console.log(this.language);
+            }
+        }
+
+        //creating some obejct from the constructor
+        var student1 = new Student("Ahnaf Ahmed", 15, 11, ["Bangla", "Spanish", "Hindi", "English"]); 
+        var student2 = new Student("Avinandan Roy", 15, 98, ["Bangla", "English", "Hindi"]);
+        var student3 = new Student("Z.M. Mubeen  ", 16, 18, ["Bangla", "English", "Hindi"]);
+
+        // console.log(student1);
+        // console.log(student2.name);
+
+        // using display_info() function
+        student1.display_info();
+        student2.display_info();
+        student3.display_info();
+
+    </script>
+</body>
+</html>
