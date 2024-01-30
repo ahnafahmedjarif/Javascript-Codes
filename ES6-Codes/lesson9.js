@@ -37,6 +37,7 @@ function studentNames1 () {
 }
 console.log(studentNames1());
 
+
 // with arrow function 
 const studentNames2 = () =>{
     return students.filter((x) => x.gpa > 3).map((y) => y.name);
