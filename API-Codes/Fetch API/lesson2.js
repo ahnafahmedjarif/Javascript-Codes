@@ -26,8 +26,8 @@ const getData = () => {
 getData();
 
 const sendData = () => {
-
-    makeRequest("https://jsonplaceholder.typicode.com/posts", {
+    
+    makeRequest("https://jsonplaceholder.typicode.com/posts/1", {
         method: 'POST',
         body: JSON.stringify({
           title: 'foo',
