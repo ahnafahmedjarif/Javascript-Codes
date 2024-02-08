@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    font-family: sans-serif;
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+  
+.container {
+    background-color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+  
+.card {
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+    min-height: 80vh;
+    width: 50%;
+    overflow: scroll;
+    border: 2px solid orange;
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+}
+  
+.card-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.card-body{
+    margin-left: 60px;
+}
+
+form input{
+    width: 400px;
+    height: 45px;
+    padding: 0.7rem;
+    border-radius: 10px;
+    border: none; 
+    font-size: 20px;
+}
+
+.btn{
+    padding: 14px;
+    margin-left: 20px;
+    font-size: 17px;
+    background-color: orange;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.btn:hover{
+    background-color: rgb(238, 182, 79);
+}
+
+#lists{
+    margin-right: 50px;
+}
+
+.li-style{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 0.6rem;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.li-style:hover{
+    background-color: #111;
+}
+
+.bg-success{
+    margin: 0.5rem 0;
+    margin-right: 50px;
+    padding: 0.5rem;
+    color: black;
+    background-color: #ddffdd;
+    border-left: 6px solid #04aa6d;
+    transition: all 0.3s;
+}
+
+.bg-danger{
+    margin: 0.5rem 0;
+    margin-right: 50px;
+    padding: 0.5rem;
+    color: black;
+    background-color: #ddffdd;
+    border-left: 6px solid #f44366;
+    transition: all 0.3s;
+}
